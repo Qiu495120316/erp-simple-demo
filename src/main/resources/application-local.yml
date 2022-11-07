@@ -2,15 +2,24 @@ server:
   port: 8088
 spring:
   banner:
-    location: classpath:bannner.txt #启动信息
+    location: classpath:bannner.tx
   main:
-    banner-mode: console  #是否显示启动信息
+    banner-mode: console
   mvc:
-    static-path-pattern: /static/** # 静态文件请求匹配方式
+    static-path-pattern: /static/**
   web:
     resources:
-      static-locations: classpath:/static/ # 修改默认静态寻址资源路径
+      static-locations: classpath:/static/
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/DB_EXAMINATION?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
 logging:
   config: classpath:log4j.properties
   level:
-    com.zjqiu.examination.erp: debug
+    com:
+      zjqiu:
+        examination:
+          erp: debug
+
