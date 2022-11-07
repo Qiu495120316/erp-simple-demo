@@ -1,0 +1,16 @@
+server:
+  port: 8088
+spring:
+  banner:
+    location: classpath:bannner.txt #启动信息
+  main:
+    banner-mode: console  #是否显示启动信息
+  mvc:
+    static-path-pattern: /static/** # 静态文件请求匹配方式
+  web:
+    resources:
+      static-locations: classpath:/static/ # 修改默认静态寻址资源路径
+logging:
+  config: classpath:log4j.properties
+  level:
+    com.zjqiu.examination.erp: debug
