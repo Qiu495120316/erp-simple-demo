@@ -1,4 +1,4 @@
-package com.zjqiu.examination.erp;
+package com.zjqiu.erp.examination;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

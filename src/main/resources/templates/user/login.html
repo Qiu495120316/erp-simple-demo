@@ -7,10 +7,29 @@
     <script type="text/javascript" src="../../static/js/jquery/3.6.0/jQuery-3.6.0.min.js"></script>
     <script type="text/javascript" src="../../static/js/bootstrap/3.4.1/bootstrap.js"></script>
     <script type="text/javascript">
-
+        function testLogin(){
+            $.ajax({
+                url: "http://localhost:8088/test/login",
+                type: "POST",
+                dataType: "json",
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    username: "Tom",
+                    password: "321"
+                }),
+                success: function(data, textStatus){
+                    console.log( data );
+                    console.log( textStatus );
+                },
+                error: function(xmlHttpRequest, textStatus, errorThrown){
+                    console.log( textStatus );
+                }
+            })
+        }
     </script>
 </head>
 <body>
     <h1>welcome, Login page<span class="label label-success">success</span></h1><br>
+    <button class="btn btn-success" onclick="testLogin()">test login</button>
 </body>
 </html>

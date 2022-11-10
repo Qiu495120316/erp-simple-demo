@@ -8,17 +8,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="../static/js/bootstrap/3.4.1/bootstrap.js"></script>
     <script type="text/javascript">
-        function jumpToLogin(){
-            $.ajax({
-                url: "http://localhost:8088/login",
-                type: "get",
-                dataType: "string"
-            })
-        }
+
     </script>
 </head>
 <body>
     <h1>welcome, Index page<span class="label label-default">Default</span></h1><br>
-    <button id="btn_submit" class="btn btn-success" onclick="jumpToLogin()">测试跳转</button>
+    <button id="btn_submit" class="btn btn-success" onclick="window.location.href='../templates/user/login.html'">测试跳转</button>
 </body>
 </html>
